@@ -92,7 +92,7 @@ const itemizedFilterArray = inventory.filter((eachInv) => {
         .then(setRetailers)
       }
     })
-  }, [currentUser, newItem, updateRetailer, rerender, updateInventory])
+  }, [currentUser, newItem, updateRetailer, rerender, updateInventory, inventory])
   
 
 

@@ -43,57 +43,59 @@ function RetailerForm({setRerender, setRetailers, newRetailer, setNewRetailer, e
 
     return (
         <div>
-            <h1>RETAILER FORM PAGE</h1>
-            <Container>
-                <Segment size="huge"><b>Add Retailer:</b>
-                <Divider></Divider>
-                    <Form onSubmit={handleSubmitNewRetailer}>
-                        <Form.Input 
-                            control={Input}
-                            label="Retailer Name:"
-                            type="text"
-                            name="retailer_name"
-                            placeholder="Ryonet"
-                            value={newRetailer.retailer_name}
-                            onChange={handleChange}
-                        />
-                        <Form.Input 
-                            control={Input}
-                            label="Website URL:"
-                            type="url"
-                            name="website_url"
-                            placeholder="https://screenprinting..."
-                            value={newRetailer.website_url}
-                            onChange={handleChange}
-                        />
-                        <Form.Input 
-                            control={Input}
-                            label="Phone Number:"
-                            type="tel"
-                            name="phone" 
-                            placeholder="234-567-8901" 
-                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                            value={newRetailer.phone}
-                            onChange={handleChange}
-                        />
-                        <small>Format: 234-567-8901</small>
-                        <br/><br/>
-                        <Form.Input 
-                            control={Input}
-                            label="Email:"
-                            type="email"
-                            name="email"
-                            placeholder="print@example.com"
-                            value={newRetailer.email}
-                            onChange={handleChange}
-                        />
-                        <div>
-                            {errors? errors.map(e => { return <p key={e}>{e}</p>}) : null}
-                        </div>
-                        <Form.Button>Submit</Form.Button>
-                    </Form>
-                </Segment>
-            </Container>
+            <div>
+                <h1>RETAILER FORM PAGE</h1>
+                <div id="retForm-cont">
+                    <Segment size="huge" id="retForm-seg"><b>Add Retailer:</b>
+                    <Divider></Divider>
+                        <Form onSubmit={handleSubmitNewRetailer}>
+                            <Form.Input 
+                                control={Input}
+                                label="Retailer Name:"
+                                type="text"
+                                name="retailer_name"
+                                placeholder="Ryonet"
+                                value={newRetailer.retailer_name}
+                                onChange={handleChange}
+                            />
+                            <Form.Input 
+                                control={Input}
+                                label="Website URL:"
+                                type="url"
+                                name="website_url"
+                                placeholder="https://screenprinting..."
+                                value={newRetailer.website_url}
+                                onChange={handleChange}
+                            />
+                            <Form.Input 
+                                control={Input}
+                                label="Phone Number:"
+                                type="tel"
+                                name="phone" 
+                                placeholder="234-567-8901" 
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                value={newRetailer.phone}
+                                onChange={handleChange}
+                            />
+                            <small>Format: 234-567-8901</small>
+                            <br/><br/>
+                            <Form.Input 
+                                control={Input}
+                                label="Email:"
+                                type="email"
+                                name="email"
+                                placeholder="print@example.com"
+                                value={newRetailer.email}
+                                onChange={handleChange}
+                            />
+                            <div>
+                                {errors? errors.map(e => { return <p key={e}>{e}</p>}) : null}
+                            </div>
+                            <Form.Button>Submit</Form.Button>
+                        </Form>
+                    </Segment>
+                </div>
+            </div>
         </div>
     )
 };

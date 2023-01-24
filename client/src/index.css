@@ -91,12 +91,52 @@ code {
 
 /* -----------------------DASHBOARD----------------------- */
 #dash {
-  /* display: flex;
-  justify-content: center; */
+  height: 100vh;
 }
 
-#item-retail-count {
+#dash-grid-cont {
+  margin: auto;
+  background-color: rgb(192, 191, 217);
+  max-width: 1100px;
+}
 
+#dash-grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 4fr 3fr 1fr;
+  
+  height: 75vh;
+}
+
+#dash-welcome-cont {
+  margin: 20px;
+}
+
+#dash-date-cont {
+  margin: 20px;
+}
+
+#dash-table-cont {
+  margin: 20px;
+}
+
+#dash-avatar-seg {
+  margin: 20px;
+}
+
+#dash-itemRetCoun-cont {
+  margin: 20px;
+}
+#item-retail-count {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.item-retail-count-seg {
+  /* max-width: 300px;
+  max-height: 450px; */
+  margin: 10px;
 }
 
 /* -----------------------INVENTORY: TABLE----------------------- */
@@ -111,7 +151,16 @@ code {
 
 /* -----------------------INVENTORY: FORM----------------------- */
 
+#invForm-cont {
 
+}
+
+#invForm-seg {
+  max-width: 600px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
@@ -144,6 +193,23 @@ code {
 
 /* -----------------------RETAILERS: FORM----------------------- */
 
+#retForm-cont {
+
+}
+
+#retForm-seg {
+  max-width: 500px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 /* -----------------------USER PREFERENCES----------------------- */
+
+#userPref-seg-cont {
+  max-width: 700px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
