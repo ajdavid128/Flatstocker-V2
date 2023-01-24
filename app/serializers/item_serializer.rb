@@ -1,5 +1,5 @@
 class ItemSerializer < ActiveModel::Serializer
-  attributes :id, :item_name, :image_url, :current_stock, :minimum_stock, :notes, :category, :item_url, :brand, :color, :unit_type, :unit_amount, :updated_at, :updated_date, :retailer_id
+  attributes :id, :item_name, :image_url, :current_stock, :minimum_stock, :notes, :category, :item_url, :brand, :color, :unit_type, :updated_at, :updated_date, :retailer_id
 
   has_one :retailer
   has_one :user
