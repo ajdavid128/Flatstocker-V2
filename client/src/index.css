@@ -103,14 +103,18 @@ code {
 #dash-grid-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 4fr 3fr 1fr;
+  grid-template-rows: 1fr 4fr 3fr;
   height: 80vh;
 }
 
 #dash-welcome-cont {
   display: flex;
   /* justify-content: center; */
-  margin: 10px;
+  margin: 20px;
+}
+
+#avatar-div-cont {
+  /* margin-left: 10px; */
 }
 
 #welcome-avatar {
@@ -126,7 +130,13 @@ code {
 }
 
 #dash-date-cont {
+  display: flex;
+  justify-content: right;
   margin: 20px;
+}
+
+#date-h1 {
+  margin-top: 13px;
 }
 
 #dash-table-cont {

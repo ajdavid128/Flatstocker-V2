@@ -5,7 +5,8 @@ function Dashboard({currentUser, inventory}) {
 
     // let date = new Date().toLocaleDateString();
     let date = new Date().toDateString()
- 
+    // let time = new Date().toLocaleTimeString()
+    // console.log()
 
     const lowstock = inventory.map((eachInv) => {
         return <DashLowStock key={eachInv.id} {...eachInv}/>
@@ -22,7 +23,7 @@ function Dashboard({currentUser, inventory}) {
             <div id="dash-grid-cont">
                 <div id="dash-grid-layout">
                     <div id="dash-welcome-cont">
-                        <div>
+                        <div id="avatar-div-cont">
                             <Segment id="welcome-avatar"> 
                                 PIC
                             </Segment>
@@ -36,7 +37,7 @@ function Dashboard({currentUser, inventory}) {
                     
                     <div>
                         <div id="dash-date-cont">
-                            <h1>Today is {date}</h1>
+                            <h1 id="date-h1">{date}</h1>
                         </div>
                     </div>
 
