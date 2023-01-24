@@ -104,12 +104,25 @@ code {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 4fr 3fr 1fr;
-  
-  height: 75vh;
+  height: 80vh;
 }
 
 #dash-welcome-cont {
-  margin: 20px;
+  display: flex;
+  /* justify-content: center; */
+  margin: 10px;
+}
+
+#welcome-avatar {
+  width: 60px;
+  height: 60px;
+  max-width: 60px;
+  max-height: 60px;
+  padding: 0px;
+}
+
+#welcome-h1 {
+  margin: 13px;
 }
 
 #dash-date-cont {
@@ -120,7 +133,14 @@ code {
   margin: 20px;
 }
 
-#dash-avatar-seg {
+#dash-table-seg {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#dash-graph-seg {
+  width: 325px;
+  height: 300px;
   margin: 20px;
 }
 
@@ -134,9 +154,22 @@ code {
 }
 
 .item-retail-count-seg {
-  /* max-width: 300px;
-  max-height: 450px; */
-  margin: 10px;
+  width: 200px;
+  height: 200px;
+  /* margin: 10px; */
+}
+
+.item-retail-count-number {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  font-size: 90px;
+}
+
+.item-retail-count-number-name {
+  display: flex;
+  justify-content: right;
+  margin-top: 50px;
 }
 
 /* -----------------------INVENTORY: TABLE----------------------- */

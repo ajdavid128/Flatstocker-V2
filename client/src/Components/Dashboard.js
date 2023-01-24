@@ -3,8 +3,9 @@ import DashLowStock from "./DashLowStock";
 
 function Dashboard({currentUser, inventory}) {
 
-    let date = new Date().toLocaleDateString();
-    console.log(date)
+    // let date = new Date().toLocaleDateString();
+    let date = new Date().toDateString()
+ 
 
     const lowstock = inventory.map((eachInv) => {
         return <DashLowStock key={eachInv.id} {...eachInv}/>
@@ -22,18 +23,25 @@ function Dashboard({currentUser, inventory}) {
                 <div id="dash-grid-layout">
                     <div id="dash-welcome-cont">
                         <div>
-                            <h1>Welcome back, {currentUser.name}!</h1>
+                            <Segment id="welcome-avatar"> 
+                                PIC
+                            </Segment>
+                        </div>
+                        <div>
+                            <h1 id="welcome-h1">
+                                Welcome back, {currentUser.name}!
+                            </h1>
                         </div>
                     </div>
                     
                     <div>
                         <div id="dash-date-cont">
-                            <h4>Current Date/Time: {date}</h4>
+                            <h1>Today is {date}</h1>
                         </div>
                     </div>
 
                     <div id="dash-table-cont">
-                        <Segment> 
+                        <Segment id="dash-table-seg"> 
                             <h2>Low Stock Warning:</h2>
                             <Table celled selectable color="red" inverted>
                             <Table.Header>
@@ -52,25 +60,45 @@ function Dashboard({currentUser, inventory}) {
                     </div>
 
                     <div>
-                        <Segment id="dash-avatar-seg">
-                            <h1>Avatar?</h1>
+                        <Segment id="dash-graph-seg">
+                            <h1>chart/graph</h1>
                         </Segment>
                     </div>
                     
                     <div id="dash-itemRetCoun-cont">
                         <div id="item-retail-count">
+                            <div>
                             <Segment className="item-retail-count-seg">
-                                <h2>Inventory Count:</h2>
-                                {itemCount} items
+                                <h4>Inventory Count:</h4>
+                                <div className="item-retail-count-number">
+                                    <b>
+                                        {itemCount}
+                                    </b>
+                                </div> 
+                                <div className="item-retail-count-number-name">
+                                    <b>Items</b>
+                                </div>
                             </Segment>
+                            </div>
+                            <div>
                             <Segment className="item-retail-count-seg">
-                                <h2>Ordering From: a bunch of stuff</h2>
-                                {retailerCount} retailers
+                                <h4>Sourcing From:</h4>
+                                <div className="item-retail-count-number">
+                                    <b>
+                                        {retailerCount}
+                                    </b>
+                                </div>
+                                <div className="item-retail-count-number-name">
+                                    <b>Retailers</b>
+                                </div>
                             </Segment>
+                            </div>
+                            <div>
                             <Segment className="item-retail-count-seg">
                             Days since last full inventory of all items:
                             <Button>Reset</Button>
                             </Segment>
+                            </div>
                         </div>
                     </div>
                 </div>
