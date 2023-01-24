@@ -11,3 +11,139 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* -----------------------LANDING PAGE----------------------- */
+
+#FLATSTOCKER {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+#land-container {
+  display: flex;
+  justify-content: center;
+}
+
+#land-seg {
+  max-width: 400px;
+  margin-top: 120px;
+}
+
+#login-title {
+ display: flex;
+ justify-content: center;
+}
+
+#login-form-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#sign-up-about {
+  columns: 100px 2;
+  /* margin: auto; */ 
+}
+
+.sign-about-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+/* -----------------------SIGN UP FORM----------------------- */
+
+#signup-cont {
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+#signup-title {
+  display: flex;
+  justify-content: center;
+}
+
+#signup-seg {
+  max-width: 500px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#create-account-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#signup-form-login-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+
+
+/* -----------------------ABOUT PAGE----------------------- */
+
+
+
+/* -----------------------DASHBOARD----------------------- */
+#dash {
+  /* display: flex;
+  justify-content: center; */
+}
+
+#item-retail-count {
+
+}
+
+/* -----------------------INVENTORY: TABLE----------------------- */
+
+
+
+
+/* -----------------------INVENTORY: ITEMIZED----------------------- */
+
+
+
+
+/* -----------------------INVENTORY: FORM----------------------- */
+
+
+
+
+
+/* -----------------------RETAILERS: CARDS----------------------- */
+
+#center-retailer-cards {
+  display: flex; 
+  justify-content: center;
+}
+
+#retail-cards { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 20px; */
+}
+
+.item-card-image {
+  display: flex;
+  justify-content: center;
+  margin-right: 0px;
+}
+
+.card-detail-content {
+  columns: 30px 2;
+}
+
+
+/* -----------------------RETAILERS: FORM----------------------- */
+
+
+
+/* -----------------------USER PREFERENCES----------------------- */
