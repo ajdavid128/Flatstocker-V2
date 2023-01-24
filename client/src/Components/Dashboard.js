@@ -23,6 +23,9 @@ function Dashboard({currentUser, inventory}) {
             </div>
             <div> Is this really happening</div>
             <div>
+                here I am again, hopefully it works now
+            </div>
+            <div>
                 <h4>Current Date/Time: {date}</h4>
             </div>
             <div>
