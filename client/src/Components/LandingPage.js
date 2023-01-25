@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button, Container, Image, Segment } from "semantic-ui-react";
+import { Button, Container, Divider, Image, Segment } from "semantic-ui-react";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
 import FlatStocker from "../images/FlatStocker.png";
@@ -26,7 +26,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                             errors={errors}
                             setErrors={setErrors}
                         />
-
+                        <Divider horizontal>OR</Divider>
                         <div id="sign-up-about">
                             <div className="sign-about-buttons">
                                 
@@ -36,9 +36,9 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                             </div>
                             <div className="sign-about-buttons">
                                 
-                                <Link to="/info">
+                                {/* <Link to="/info">
                                     <Button>About Page</Button>
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                     </Segment>

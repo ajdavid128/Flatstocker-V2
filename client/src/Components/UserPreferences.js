@@ -35,7 +35,6 @@ function UserPreferences({errors, setErrors, currentUser, setCurrentUser, setUpd
     return (
         <div id="user-preferences">
             <div>
-            <h1>USER PREFERENCES PAGE</h1>
                 <div id="userPref-seg-cont">
                 <Segment.Group>
                     <Segment size="massive">

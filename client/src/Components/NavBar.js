@@ -80,9 +80,9 @@ function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
                                 <Link to="/preferences">
                                     <Dropdown.Item>User Preferences</Dropdown.Item>
                                 </Link>
-                                <Link to="/about">
+                                {/* <Link to="/about">
                                     <Dropdown.Item>About Flatstocker</Dropdown.Item>
-                                </Link>
+                                </Link> */}
                                 {/* use Navigate to redirect the logout to the login page */}
                                 <Dropdown.Item onClick={handleLogOut}>Logout</Dropdown.Item>
                             </Dropdown.Menu>

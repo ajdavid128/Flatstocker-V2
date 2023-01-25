@@ -1,4 +1,8 @@
 import RetailerCard from './RetailerCard';
+import Tape from "../images/Tape.png";
+import Inky_knife from "../images/Inky_knife.png";
+import { Image } from 'semantic-ui-react';
+
 
 function Retailers({currentUser, setUpdateRetailer, setRerender, errors, setErrors, retailers}) {
 
@@ -21,6 +25,11 @@ function Retailers({currentUser, setUpdateRetailer, setRerender, errors, setErro
 
     return (
         <div id="retailer-page">
+            <div id="retailer-header">
+                <Image className="retailer-header-image" src={Inky_knife}/>
+                <h1 id="retailer-header-text">Retailers</h1>
+                <Image className="retailer-header-image2" src={Tape}/>
+            </div>
             <div id="center-retailer-cards">
                 <div id="retail-cards">
                     {retailerArray}
