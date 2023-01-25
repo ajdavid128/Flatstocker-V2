@@ -1,5 +1,6 @@
-import { Button, Segment, Table } from "semantic-ui-react";
+import { Image, Button, Segment, Table } from "semantic-ui-react";
 import DashLowStock from "./DashLowStock";
+import Dribble from "../images/Dribble.png";
 
 function Dashboard({currentUser, inventory}) {
 
@@ -26,7 +27,7 @@ function Dashboard({currentUser, inventory}) {
                         <div id="dash-welcome-cont">
                             <div id="avatar-div-cont">
                                 <Segment id="welcome-avatar"> 
-                                    PIC
+                                    <Image src={Dribble}/>
                                 </Segment>
                             </div>
                             <div>
@@ -45,24 +46,7 @@ function Dashboard({currentUser, inventory}) {
 
                 <div id="dash-grid-layout">
                     
-                    <div id="dash-table-cont">
-                        <Segment id="dash-table-seg"> 
-                            <h2>Low Stock Warning:</h2>
-                            <Table celled selectable color="red" inverted>
-                            <Table.Header>
-                                    <Table.Row>
-                                        <Table.HeaderCell>Item</Table.HeaderCell>
-                                        <Table.HeaderCell>Color</Table.HeaderCell>
-                                        <Table.HeaderCell>Current Stock</Table.HeaderCell>
-                                        <Table.HeaderCell>Min. Stock</Table.HeaderCell>
-                                        <Table.HeaderCell>Category</Table.HeaderCell>
-                                        <Table.HeaderCell>URL</Table.HeaderCell>
-                                    </Table.Row>
-                                </Table.Header>
-                                {lowstock}
-                            </Table>
-                        </Segment>
-                    </div>
+                    
 
                     {/* <div>
                         <Segment id="dash-graph-seg">
@@ -105,6 +89,24 @@ function Dashboard({currentUser, inventory}) {
                                 </Segment>
                             </div>
                         </div>
+                    </div>
+                    <div id="dash-table-cont">
+                        <Segment id="dash-table-seg"> 
+                            <h2>Low Stock Warning:</h2>
+                            <Table celled selectable color="red" inverted>
+                            <Table.Header>
+                                    <Table.Row>
+                                        <Table.HeaderCell>Item</Table.HeaderCell>
+                                        <Table.HeaderCell>Color</Table.HeaderCell>
+                                        <Table.HeaderCell>Current Stock</Table.HeaderCell>
+                                        <Table.HeaderCell>Min. Stock</Table.HeaderCell>
+                                        <Table.HeaderCell>Category</Table.HeaderCell>
+                                        <Table.HeaderCell>URL</Table.HeaderCell>
+                                    </Table.Row>
+                                </Table.Header>
+                                {lowstock}
+                            </Table>
+                        </Segment>
                     </div>
                 </div>
             </div>

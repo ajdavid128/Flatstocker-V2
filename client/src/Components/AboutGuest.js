@@ -4,7 +4,7 @@ import { Button } from "semantic-ui-react";
 
 function AboutGuest() {
     return (
-        <div>
+        <div id="about-guest-page">
             <h1>about guest babbsbababfdy</h1>
             <Link to="/">
                 <Button>Login</Button>

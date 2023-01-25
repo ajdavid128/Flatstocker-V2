@@ -3,15 +3,17 @@ import { Button, Container, Image, Segment } from "semantic-ui-react";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
 import FlatStocker from "../images/FlatStocker.png";
+import Print_Pins from "../images/Print_Pins.png";
 
 
 function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
     return (
         <div id="landing-page">
+            {/* <Image src={Print_Pins}/> */}
+            
             <div id="landing-logo">
                 <Image src={FlatStocker} size="huge"/>
             </div>
-            {/* <h1 id="FLATSTOCKER">FlatStocker</h1> */}
             
             <div >
                 <div id="land-container">

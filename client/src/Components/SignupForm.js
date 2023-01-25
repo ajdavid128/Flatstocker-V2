@@ -53,7 +53,7 @@ function SignupForm({errors, setErrors, setCurrentUser}) {
 
 
     return (
-        <div>
+        <div id="signup-page">
 
             <div>
                 <div id="signup-cont">

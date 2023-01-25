@@ -42,7 +42,7 @@ function RetailerForm({setRerender, setRetailers, newRetailer, setNewRetailer, e
     };
 
     return (
-        <div>
+        <div id="retailer-form-page">
             <div>
                 <h1>RETAILER FORM PAGE</h1>
                 <div id="retForm-cont">
