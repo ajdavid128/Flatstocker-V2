@@ -68,7 +68,7 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
     return (
         <div id="inventory-form-page">
             <div>
-            <h1>INVENTORY FORM PAGE</h1>
+            
                 <div id="invForm-cont">
                     <Segment size="huge" id="invForm-seg"><b>Add Item to Inventory:</b>
                     <Divider></Divider>

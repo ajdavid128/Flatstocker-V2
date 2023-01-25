@@ -281,6 +281,22 @@ code {
 
 /* -----------------------INVENTORY: TABLE----------------------- */
 
+#inventory-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+#inventory-header-text {
+  font-size: 75px;
+}
+
+.inventory-header-images {
+  max-height: 75px;
+  margin: 30px;
+}
+
 #all-inventory-page{
   /* height: 100vh; */
 }
@@ -288,8 +304,36 @@ code {
 
 /* -----------------------INVENTORY: ITEMIZED----------------------- */
 
+#itemized-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
 
+#itemized-header-text {
+  font-size: 75px;
+}
 
+.itemized-header-images {
+  max-height: 75px;
+  margin: 30px;
+}
+
+#itemized-search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#itemized-card-cont {
+  justify-content: center;
+}
+
+#itemized-spacer {
+  margin-top: 100px;
+  color: #E8E3CC;
+}
 
 /* -----------------------INVENTORY: FORM----------------------- */
 
@@ -318,12 +362,12 @@ height: 100vh;
 
 #retailer-page {
 height: 100vh;
-
 }
 
 #center-retailer-cards {
   display: flex; 
   justify-content: center;
+  margin-top: 80px;
 }
 
 #retail-cards { 

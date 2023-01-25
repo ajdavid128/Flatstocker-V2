@@ -1,6 +1,7 @@
-import { Container, Table } from "semantic-ui-react";
+import { Image, Container, Table } from "semantic-ui-react";
 import InventoryCard from "./InventoryCard";
 import InventoryTable from "./InventoryTable";
+import Inky_knives from "../images/Inky_knives.png";
 
 function Inventory({inventory}) {
 
@@ -16,7 +17,11 @@ const { compare } = Intl.Collator('en-US');
 
     return (
         <div id="all-inventory-page">
-            <h1>INVENTORY PAGE</h1>
+            <div id="inventory-header" >
+                <Image className="inventory-header-images" src={Inky_knives}/>
+                <h1 id="inventory-header-text">Inventory</h1>
+                <Image className="inventory-header-images" src={Inky_knives}/>
+            </div>
             
                 <Container>
                     <Table celled selectable collapsing>

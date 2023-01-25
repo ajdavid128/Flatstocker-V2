@@ -44,7 +44,6 @@ function RetailerForm({setRerender, setRetailers, newRetailer, setNewRetailer, e
     return (
         <div id="retailer-form-page">
             <div>
-                <h1>RETAILER FORM PAGE</h1>
                 <div id="retForm-cont">
                     <Segment size="huge" id="retForm-seg"><b>Add Retailer:</b>
                     <Divider></Divider>
