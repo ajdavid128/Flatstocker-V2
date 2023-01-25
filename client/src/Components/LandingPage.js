@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
-import { Button, Container, Segment } from "semantic-ui-react";
+import { Button, Container, Image, Segment } from "semantic-ui-react";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
+import FlatStocker from "../images/FlatStocker.png";
 
 
 function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
     return (
-        <div>
-            <h1 id="FLATSTOCKER">FlatStocker</h1>
+        <div id="landing-page">
+            <div id="landing-logo">
+                <Image src={FlatStocker} size="huge"/>
+            </div>
+            {/* <h1 id="FLATSTOCKER">FlatStocker</h1> */}
             
             <div >
                 <div id="land-container">

@@ -21,26 +21,30 @@ function Dashboard({currentUser, inventory}) {
     return (
         <div id="dash">
             <div id="dash-grid-cont">
-                <div id="dash-grid-layout">
-                    <div id="dash-welcome-cont">
-                        <div id="avatar-div-cont">
-                            <Segment id="welcome-avatar"> 
-                                PIC
-                            </Segment>
+
+                    <div id="v1-welcome-time">
+                        <div id="dash-welcome-cont">
+                            <div id="avatar-div-cont">
+                                <Segment id="welcome-avatar"> 
+                                    PIC
+                                </Segment>
+                            </div>
+                            <div>
+                                <h1 id="welcome-h1">
+                                    Welcome back, {currentUser.name}!
+                                </h1>
+                            </div>
                         </div>
+                        
                         <div>
-                            <h1 id="welcome-h1">
-                                Welcome back, {currentUser.name}!
-                            </h1>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <div id="dash-date-cont">
-                            <h1 id="date-h1">{date}</h1>
+                            <div id="dash-date-cont">
+                                <h1 id="date-h1">{date}</h1>
+                            </div>
                         </div>
                     </div>
 
+                <div id="dash-grid-layout">
+                    
                     <div id="dash-table-cont">
                         <Segment id="dash-table-seg"> 
                             <h2>Low Stock Warning:</h2>
@@ -60,45 +64,45 @@ function Dashboard({currentUser, inventory}) {
                         </Segment>
                     </div>
 
-                    <div>
+                    {/* <div>
                         <Segment id="dash-graph-seg">
                             <h1>chart/graph</h1>
                         </Segment>
-                    </div>
+                    </div> */}
                     
                     <div id="dash-itemRetCoun-cont">
                         <div id="item-retail-count">
-                            <div>
-                            <Segment className="item-retail-count-seg">
-                                <h4>Inventory Count:</h4>
-                                <div className="item-retail-count-number">
-                                    <b>
-                                        {itemCount}
-                                    </b>
-                                </div> 
-                                <div className="item-retail-count-number-name">
-                                    <b>Items</b>
-                                </div>
-                            </Segment>
+                            <div className="item-retail-count-seg-cont">
+                                <Segment className="item-retail-count-seg">
+                                    <h4>Inventory Count:</h4>
+                                    <div className="item-retail-count-number">
+                                        <b>
+                                            {itemCount}
+                                        </b>
+                                    </div> 
+                                    <div className="item-retail-count-number-name">
+                                        <b>Items</b>
+                                    </div>
+                                </Segment>
                             </div>
-                            <div>
-                            <Segment className="item-retail-count-seg">
-                                <h4>Sourcing From:</h4>
-                                <div className="item-retail-count-number">
-                                    <b>
-                                        {retailerCount}
-                                    </b>
-                                </div>
-                                <div className="item-retail-count-number-name">
-                                    <b>Retailers</b>
-                                </div>
-                            </Segment>
+                            <div className="item-retail-count-seg-cont">
+                                <Segment className="item-retail-count-seg">
+                                    <h4>Sourcing From:</h4>
+                                    <div className="item-retail-count-number">
+                                        <b>
+                                            {retailerCount}
+                                        </b>
+                                    </div>
+                                    <div className="item-retail-count-number-name">
+                                        <b>Retailers</b>
+                                    </div>
+                                </Segment>
                             </div>
-                            <div>
-                            <Segment className="item-retail-count-seg">
-                            Days since last full inventory of all items:
-                            <Button>Reset</Button>
-                            </Segment>
+                            <div className="item-retail-count-seg-cont">
+                                <Segment className="item-retail-count-seg">
+                                    Days since last full inventory of all items:
+                                    <Button>Reset</Button>
+                                </Segment>
                             </div>
                         </div>
                     </div>

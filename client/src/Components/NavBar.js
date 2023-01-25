@@ -34,7 +34,7 @@ function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
     
     return (
         <>
-            <Menu pointing secondary>
+            <Menu id="navbar" pointing secondary>
                 {/* {currentUser && currentUser ?
                 <> */}
                     <Link to="/dashboard">

@@ -98,7 +98,7 @@ const itemizedFilterArray = inventory.filter((eachInv) => {
 
   return (
     <BrowserRouter>
-      <div>
+      <div id="app-component">
         <Routes>
         <Route index element={
               <LandingPage 

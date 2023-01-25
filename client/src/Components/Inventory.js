@@ -15,7 +15,7 @@ const { compare } = Intl.Collator('en-US');
 
 
     return (
-        <div>
+        <div id="all-inventory-page">
             <h1>INVENTORY PAGE</h1>
             
                 <Container>

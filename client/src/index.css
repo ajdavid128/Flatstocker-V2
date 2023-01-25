@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #E8E3CC;
+  /* color: #E8E3CC; */
 }
 
 code {
@@ -12,11 +14,25 @@ code {
     monospace;
 }
 
+#app-component {
+  background-color: #E8E3CC;
+}
+
+/* -----------------------NAVBAR----------------------- */
+
+#navbar {
+  background-color: #b5b19f;
+}
+
 
 /* -----------------------LANDING PAGE----------------------- */
 
-#FLATSTOCKER {
-  margin-top: 60px;
+#landing-page {
+  /* background-color: #BE5A38; */
+}
+
+#landing-logo {
+  margin-top: 80px;
   display: flex;
   justify-content: center;
 }
@@ -28,7 +44,7 @@ code {
 
 #land-seg {
   max-width: 400px;
-  margin-top: 120px;
+  margin-top: 60px;
 }
 
 #login-title {
@@ -83,10 +99,17 @@ code {
   margin: 20px;
 }
 
+/* -----------------------GUEST ABOUT PAGE----------------------- */
+
+
+
 
 
 /* -----------------------ABOUT PAGE----------------------- */
 
+#about-page{
+  height: 100vh;
+}
 
 
 /* -----------------------DASHBOARD----------------------- */
@@ -94,15 +117,20 @@ code {
   height: 100vh;
 }
 
+#v1-welcome-time{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 #dash-grid-cont {
   margin: auto;
-  background-color: rgb(192, 191, 217);
+  /* background-color: rgb(192, 191, 217); */
   max-width: 1100px;
 }
 
 #dash-grid-layout {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  /* grid-template-columns: 2fr 1fr; */
   grid-template-rows: 1fr 4fr 3fr;
   height: 80vh;
 }
@@ -163,10 +191,16 @@ code {
   grid-gap: 20px;
 }
 
+.item-retail-count-seg-cont{
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+
 .item-retail-count-seg {
   width: 200px;
   height: 200px;
-  /* margin: 10px; */
+  margin: 0px;
 }
 
 .item-retail-count-number {
@@ -184,7 +218,9 @@ code {
 
 /* -----------------------INVENTORY: TABLE----------------------- */
 
-
+#all-inventory-page{
+  /* height: 100vh; */
+}
 
 
 /* -----------------------INVENTORY: ITEMIZED----------------------- */
@@ -250,9 +286,14 @@ code {
 
 /* -----------------------USER PREFERENCES----------------------- */
 
+#user-preferences {
+/* height: 100vh */
+}
+
 #userPref-seg-cont {
   max-width: 700px;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+  background-color: white;;
 }
