@@ -57,6 +57,7 @@ function SignupForm({errors, setErrors, setCurrentUser}) {
 
             <div>
                 <div id="signup-cont">
+                    {/* <div id="spacer"></div> */}
                     <Segment id="signup-seg">
                         <h1 id="signup-title">Please Sign Up</h1>
                         <Form onSubmit={handleSignup}>

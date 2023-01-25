@@ -8,6 +8,8 @@ import Print_Pins from "../images/Print_Pins.png";
 
 function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
     return (
+        <div id="background-login">
+            
         <div id="landing-page">
             {/* <Image src={Print_Pins}/> */}
             
@@ -45,6 +47,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
             
 
             
+        </div>
         </div>
     )
 };
