@@ -20,9 +20,11 @@ function Retailers({currentUser, setUpdateRetailer, setRerender, errors, setErro
 
 
     return (
-        <div id="center-retailer-cards">
-            <div id="retail-cards">
-                {retailerArray}
+        <div id="retailer-page">
+            <div id="center-retailer-cards">
+                <div id="retail-cards">
+                    {retailerArray}
+                </div>
             </div>
         </div>
     )

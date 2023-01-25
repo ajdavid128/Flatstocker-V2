@@ -9,12 +9,13 @@ import Print_Pins from "../images/Print_Pins.png";
 function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
     return (
         <div id="background-login">
-            
+
         <div id="landing-page">
-            {/* <Image src={Print_Pins}/> */}
             
             <div id="landing-logo">
-                <Image src={FlatStocker} size="huge"/>
+                <Segment id="logo-seg">
+                    <Image src={FlatStocker} size="huge"/>
+                </Segment>
             </div>
             
             <div >

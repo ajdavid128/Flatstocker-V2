@@ -54,6 +54,7 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
                 <Form onSubmit={handleEmailSubmit}>
                     <Form.Field
                         control={Input}
+                        label="Please enter new email address:"
                         id="email"
                         name="email"
                         placeholder="new_email@example.com"
@@ -76,7 +77,9 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
                         value={newEmail.password_confirmation}
                         onChange={handleEmailChange}
                     />
-                    <Form.Button>Submit New Email</Form.Button>
+                    <div id="change-email-submit">
+                        <Form.Button>Submit New Email</Form.Button>
+                    </div>
                 </Form>
                 <div>
                     {errors? errors.map(e => { return <p key={e}>{e}</p>}) : null}

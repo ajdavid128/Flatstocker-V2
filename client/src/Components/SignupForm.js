@@ -1,6 +1,7 @@
-import { Container, Form, Input, Button, Segment, Divider } from "semantic-ui-react";
+import { Image, Form, Input, Button, Segment, Divider } from "semantic-ui-react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import FlatStocker from "../images/FlatStocker.png";
 
 function SignupForm({errors, setErrors, setCurrentUser}) {
 
@@ -56,8 +57,13 @@ function SignupForm({errors, setErrors, setCurrentUser}) {
         <div id="signup-page">
 
             <div>
-                <div id="signup-cont">
-                    {/* <div id="spacer"></div> */}
+                <div id="landing-logo">
+                    <Segment id="logo-seg">
+                        <Image src={FlatStocker} size="huge"/>
+                    </Segment>
+                </div>
+
+                <div id="signup-cont">               
                     <Segment id="signup-seg">
                         <h1 id="signup-title">Please Sign Up</h1>
                         <Form onSubmit={handleSignup}>

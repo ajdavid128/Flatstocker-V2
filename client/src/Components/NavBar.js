@@ -1,5 +1,7 @@
-import { Dropdown, Menu } from "semantic-ui-react";
+import { Dropdown, Image, Menu } from "semantic-ui-react";
 import { Outlet, Link, useNavigate } from "react-router-dom";
+import Fs_logo from "../images/Fs_logo.png";
+import Tape from "../images/Tape.png";
 
 
 function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
@@ -37,8 +39,16 @@ function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
             <Menu id="navbar" pointing secondary>
                 {/* {currentUser && currentUser ?
                 <> */}
+                <div id="nav-logo-cont">
                     <Link to="/dashboard">
-                        <Menu.Item name="Dashboard"/>
+                        <Image id="nav-logo" src={Fs_logo} />
+                    </Link>
+                </div>
+                <div id="space">
+
+                </div>
+                    <Link to="/dashboard">
+                        <Menu.Item id="dash-item" name="Dashboard"/>
                     </Link>    
                     <Dropdown item text="Inventory">
                         <Dropdown.Menu>
@@ -64,6 +74,7 @@ function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
                         </Dropdown.Menu>
                     </Dropdown>
                     <Menu.Menu position="right">
+                        {/* <Image id="nav-tape-image" src={Tape}/> */}
                         <Dropdown item text="Settings">
                             <Dropdown.Menu>
                                 <Link to="/preferences">

@@ -211,7 +211,9 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
                             <div>
                                 {errors? errors.map(e => { return <p key={e}>{e}</p>}) : null}
                             </div>
-                            <Form.Button>Submit</Form.Button>
+                            <div id="invent-form-submit">
+                                <Form.Button>Submit</Form.Button>
+                            </div>
                         </Form>
                     </Segment>
                 </div>

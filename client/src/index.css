@@ -28,8 +28,32 @@ code {
 
 #navbar {
   background-color: #b5b19f;
+  padding-top: 10px;
 }
 
+#nav-logo-cont {
+  margin: 10px;
+  /* margin-left: 10px;
+  margin-top: 5px; */
+}
+
+#nav-logo {
+  max-width: 50px;
+  /* padding-bottom: 10px; */
+}
+
+#space {
+  margin-left: 10px;
+}
+
+#dash-item {
+  margin-top: 17px;
+}
+
+/* #nav-tape-image {
+  max-height: 40px;
+  margin-top: 5px;
+} */
 
 /* -----------------------LANDING PAGE----------------------- */
 #background-login {
@@ -42,6 +66,10 @@ code {
   background: url("./images/Print_Pins.png");
   background-size: contain;
   /* background-color: #BE5A38; */
+}
+
+#logo-seg {
+  background-color: #E8E3CC;
 }
 
 #landing-logo {
@@ -59,6 +87,7 @@ code {
 #land-seg {
   max-width: 400px;
   margin-top: 60px;
+  /* background-color: #E8E3CC; */
 }
 
 #login-title {
@@ -85,15 +114,15 @@ code {
 /* -----------------------SIGN UP FORM----------------------- */
 
 #signup-page{
-  height: 100vh;
+  /* height: 100vh; */
+  background: url("./images/Print_Pins.png");
+  background-size: contain;
   /* background-color: #E8E3CC; */
 }
 
-/* #spacer{
-
-} */
-
 #signup-cont {
+  padding-top: 50px;
+  padding-bottom: 100px;
   /* display: flex; */
   /* justify-content: center; */
 }
@@ -120,7 +149,7 @@ code {
 #signup-form-login-button {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin-top: 20px;
 }
 
 /* -----------------------GUEST ABOUT PAGE----------------------- */
@@ -196,10 +225,13 @@ code {
 
 #dash-table-cont {
   margin: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 #dash-table-seg {
   max-height: 300px;
+  max-width: 1000px;
   overflow-y: auto;
 }
 
@@ -210,12 +242,16 @@ code {
 }
 
 #dash-itemRetCoun-cont {
-  margin: 20px;
+  /* margin: 20px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 #item-retail-count {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  /* grid-gap: 20px; */
 }
 
 .item-retail-count-seg-cont{
@@ -272,9 +308,18 @@ height: 100vh;
   margin-right: auto;
 }
 
+#invent-form-submit {
+  display: flex;
+  justify-content: center;
+}
 
 
 /* -----------------------RETAILERS: CARDS----------------------- */
+
+#retailer-page {
+height: 100vh;
+
+}
 
 #center-retailer-cards {
   display: flex; 
@@ -305,6 +350,7 @@ height: 100vh;
 
 #retailer-form-page{
   height: 100vh;
+  background-color: #E8E3CC;
 }
 
 #retForm-cont {
@@ -318,11 +364,17 @@ height: 100vh;
   margin-right: auto;
 }
 
+#retailer-form-submit {
+  display: flex;
+  justify-content: center;
+}
+
 
 /* -----------------------USER PREFERENCES----------------------- */
 
 #user-preferences {
-/* height: 100vh */
+height: 100vh;
+background-color: #E8E3CC;
 }
 
 #userPref-seg-cont {
@@ -331,4 +383,15 @@ height: 100vh;
   margin-left: auto;
   margin-right: auto;
   background-color: white;;
+}
+
+#delete-account-seg {
+  background-color: #BE5A38;
+}
+
+/* -----------------------CHANGE EMAIL FORM----------------------- */
+
+#change-email-submit {
+  display: flex;
+  justify-content: center;
 }
