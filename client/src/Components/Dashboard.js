@@ -1,6 +1,7 @@
 import { Image, Button, Segment, Table } from "semantic-ui-react";
 import DashLowStock from "./DashLowStock";
 import Dribble from "../images/Dribble.png";
+import { Link } from "react-router-dom";
 
 function Dashboard({currentUser, inventory}) {
 
@@ -13,7 +14,7 @@ function Dashboard({currentUser, inventory}) {
         return <DashLowStock key={eachInv.id} {...eachInv}/>
     })
 
-    // console.log(currentUser)
+    console.log(currentUser)
 
     let itemCount = currentUser.items.length;
     let retailerCount = currentUser.unique_retailers.length;
@@ -26,9 +27,11 @@ function Dashboard({currentUser, inventory}) {
                     <div id="v1-welcome-time">
                         <div id="dash-welcome-cont">
                             <div id="avatar-div-cont">
-                                <Segment id="welcome-avatar"> 
-                                    <Image src={Dribble}/>
-                                </Segment>
+                                <Link to="/preferences">
+                                    <Segment id="welcome-avatar"> 
+                                        <Image src={Dribble}/>
+                                    </Segment>
+                                </Link>
                             </div>
                             <div>
                                 <h1 id="welcome-h1">
@@ -84,7 +87,8 @@ function Dashboard({currentUser, inventory}) {
                             </div>
                             <div className="item-retail-count-seg-cont">
                                 <Segment className="item-retail-count-seg">
-                                    Days since last full inventory of all items:
+                                    <h4></h4>
+                                    
                                     <Button>Reset</Button>
                                 </Segment>
                             </div>
