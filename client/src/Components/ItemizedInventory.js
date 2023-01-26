@@ -1,4 +1,4 @@
-import { Card, Image, Input } from "semantic-ui-react";
+import { Card, Image, Input, Segment } from "semantic-ui-react";
 import InventoryCard from "./InventoryCard";
 import Spill from "../images/Spill.png";
 import Splatter from "../images/Splatter.png";
@@ -23,7 +23,7 @@ function ItemizedInventory({inventory, setSearchItemized, setUpdateInventory, se
     };
 
     return (
-        <div>
+        <div id="itemized-page">
             
             <div id="itemized-header">
                 <Image className="itemized-header-images" src={Splatter}/>
@@ -37,10 +37,12 @@ function ItemizedInventory({inventory, setSearchItemized, setUpdateInventory, se
                     onChange={handleChange}
                 />
             </div>
-                <div>
-                    <Card.Group id="itemized-card-cont">
-                        {inventoryArray}
-                    </Card.Group>
+                <div id="itemized-card-seg-cont">
+                    <Segment id="itemized-card-seg">
+                        <Card.Group id="itemized-card-cont">
+                            {inventoryArray}
+                        </Card.Group>
+                    </Segment>
                 </div>
                 <div id="itemized-spacer">Space</div>
         </div>

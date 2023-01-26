@@ -87,9 +87,15 @@ function Dashboard({currentUser, inventory}) {
                             </div>
                             <div className="item-retail-count-seg-cont">
                                 <Segment className="item-retail-count-seg">
-                                    <h4></h4>
-                                    
-                                    <Button>Reset</Button>
+                                    <h4>Days Since Last Full Inventory:</h4>
+                                    <div className="item-retail-count-number">
+                                        <b>
+                                            0
+                                        </b>
+                                    </div>
+                                    <div className="item-retail-count-number-name">
+                                        <Button size="mini">Reset</Button>
+                                    </div>
                                 </Segment>
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-import { Image, Container, Table } from "semantic-ui-react";
+import { Image, Container, Table, Segment } from "semantic-ui-react";
 import InventoryCard from "./InventoryCard";
 import InventoryTable from "./InventoryTable";
 import Inky_knives from "../images/Inky_knives.png";
@@ -22,8 +22,8 @@ const { compare } = Intl.Collator('en-US');
                 <h1 id="inventory-header-text">Inventory</h1>
                 <Image className="inventory-header-images" src={Inky_knives}/>
             </div>
-            
-                <Container>
+            <div id="inventory-table-cont">
+                <Segment id="inventory-table-seg">
                     <Table celled selectable collapsing>
                         <Table.Header>
                             <Table.Row>
@@ -40,8 +40,9 @@ const { compare } = Intl.Collator('en-US');
                         </Table.Header>
                         {inventoryArray}
                     </Table> 
-                </Container>
-           
+                </Segment>
+                </div>
+           <div id="inventory-table-spacer">space</div>
         </div>
     )
 };

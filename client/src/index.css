@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+
 /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -260,7 +261,7 @@ code {
 }
 
 .item-retail-count-seg {
-  width: 200px;
+  width: 250px;
   height: 200px;
   margin: 0px;
 }
@@ -279,6 +280,10 @@ code {
 }
 
 /* -----------------------INVENTORY: TABLE----------------------- */
+
+#all-inventory-page {
+  height: 100vh;
+}
 
 #inventory-header {
   display: flex;
@@ -300,14 +305,36 @@ code {
   /* height: 100vh; */
 }
 
+#inventory-table-cont {
+  display: flex;
+  justify-content: center;
+}
+
+
+#inventory-table-seg {
+  
+  max-height: 600px;
+  max-width: 1300px;
+  overflow-y: auto;
+}
+
+#inventory-table-spacer {
+  margin: 100px;
+  color:#E8E3CC;
+}
+
 
 /* -----------------------INVENTORY: ITEMIZED----------------------- */
+
+#itemized-page {
+ height: 100vh;
+}
 
 #itemized-header {
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 #itemized-header-text {
@@ -327,6 +354,18 @@ code {
 
 #itemized-card-cont {
   justify-content: center;
+}
+
+#itemized-card-seg-cont {
+  display: flex;
+  justify-content: center;
+}
+
+#itemized-card-seg {
+  max-height: 600px;
+  max-width: 1300px;
+  overflow-y: auto;
+  /* background-color: #E8E3CC; */
 }
 
 #itemized-spacer {
