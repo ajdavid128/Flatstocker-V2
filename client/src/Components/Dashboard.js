@@ -61,7 +61,7 @@ function Dashboard({currentUser, inventory}) {
                         <div id="item-retail-count">
                             <div className="item-retail-count-seg-cont">
                                 <Segment className="item-retail-count-seg">
-                                    <h4>Inventory Count:</h4>
+                                    <h4>Total Inventory Count:</h4>
                                     <div className="item-retail-count-number">
                                         <b>
                                             {itemCount}

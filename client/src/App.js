@@ -68,7 +68,7 @@ const itemizedFilterArray = inventory.filter((eachInv) => {
         })
       }
     });
-  }, [updateEmail]);
+  }, [updateEmail, rerender]);
 
 // FETCH INVENTORY FOR USER
   useEffect(()=>{
@@ -79,7 +79,7 @@ const itemizedFilterArray = inventory.filter((eachInv) => {
         .then(setInventory)
       }
     })
-  }, [currentUser, rerender, updateInventory, updateRetailer])
+  }, [currentUser, rerender, updateInventory, updateRetailer, newRetailer])
 
   // console.log(inventory)
 
@@ -92,7 +92,7 @@ const itemizedFilterArray = inventory.filter((eachInv) => {
         .then(setRetailers)
       }
     })
-  }, [currentUser, newItem, updateRetailer, rerender, updateInventory, inventory])
+  }, [currentUser, newItem, updateRetailer, rerender, updateInventory, inventory, newRetailer])
   
 
 

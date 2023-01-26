@@ -197,7 +197,7 @@ function InventoryCard({id, item_name, image_url, current_stock, minimum_stock, 
                                     </Form.Field>
                                 </Card.Description>
                                 <Card.Description>
-                                <h3>Retailer:</h3> 
+                                <h3 id="itemized-card-retailer-h3">Retailer:</h3> 
                                 <Form.Field                            
                                     control='select'
                                     label='Retailer:' 

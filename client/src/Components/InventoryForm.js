@@ -158,6 +158,8 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
                                     <option value='lb(s)'>pounds (lbs)</option>
                                     <option value='ton(s)'>tons (tons)</option>
                                     <option value='pack(s)'>packs</option>
+                                    <option value='can(s)'>cans</option>
+                                    <option value='bottle(s)'>bottles</option>
                                     <option value='roll(s)'>rolls</option>
                                     <option value='box(es)'>boxes</option>
                                     <option value='case(s)'>cases</option>

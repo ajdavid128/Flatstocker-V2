@@ -352,6 +352,10 @@ height: 100vh;
   margin-right: auto;
 }
 
+#itemized-card-retailer-h3 {
+  margin-bottom: 0px;
+}
+
 #invent-form-submit {
   display: flex;
   justify-content: center;
