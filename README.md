@@ -8,7 +8,7 @@
 > **Libraries:** React Router | Semantic UI
 
 
-**FlatStocker** is a full-stack inventory management web application capstone project designed by Aaron David during his time in Flatiron School’s Software Engineering Bootcamp. FlatStocker utilizes React.js on the front-end and Ruby on Rails on the back-end. Additional front-end libraries involved in the project include Semantic UI and React Router.  
+**FlatStocker** is a full-stack inventory management web application capstone project designed by Aaron David during his last phase (3 weeks) in Flatiron School’s Software Engineering Bootcamp. FlatStocker utilizes React.js on the front-end and Ruby on Rails on the back-end. Additional front-end libraries involved in the project include Semantic UI and React Router.  
 
 **Technical demonstrations within the application:**
 - Utilized MVC (Model–view–controller) architectural pattern to develop user interface
