@@ -52,6 +52,10 @@ function SignupForm({errors, setErrors, setCurrentUser}) {
         })
     };
 
+    const handleClearError = () => {
+        setErrors([]);
+    }
+
 
     return (
         <div id="signup-page">
@@ -132,7 +136,7 @@ function SignupForm({errors, setErrors, setCurrentUser}) {
                         
                         <div id="signup-form-login-button">
                             <Link to="/">
-                                <Button>Login</Button>
+                                <Button onClick={handleClearError}>Login</Button>
                             </Link>
                         </div>
                     </Segment>

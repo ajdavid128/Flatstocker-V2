@@ -16,6 +16,7 @@ function UserPreferences({errors, setErrors, currentUser, setCurrentUser, setUpd
     const handleChangeEmailForm = () => {
         setDisplayEmailForm(!displayEmailForm);
         setButtonText(!buttonText);
+        setErrors([]);
     }
 
     const handleDeleteUser = () => {

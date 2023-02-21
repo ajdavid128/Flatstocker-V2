@@ -19,7 +19,12 @@ function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
         navigate("/");
       }
     });
+    setErrors([]);
   };
+
+  const handleClearError = () => {
+    setErrors([]);
+};
 
   const LandingNav = () => {
     return (
@@ -59,7 +64,7 @@ function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
                                 <Dropdown.Item>Itemized Inventory</Dropdown.Item>
                             </Link>
                             <Link to="/form/new/inventory">
-                                <Dropdown.Item>Add Inventory</Dropdown.Item>
+                                <Dropdown.Item onClick={handleClearError}>Add Inventory</Dropdown.Item>
                             </Link>
                         </Dropdown.Menu>
                     </Dropdown>
@@ -69,7 +74,7 @@ function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
                                 <Dropdown.Item>All Retailers</Dropdown.Item>
                             </Link>
                             <Link to="form/new/retailer">
-                                <Dropdown.Item>Add Retailer</Dropdown.Item>
+                                <Dropdown.Item onClick={handleClearError}>Add Retailer</Dropdown.Item>
                             </Link>
                         </Dropdown.Menu>
                     </Dropdown>

@@ -7,6 +7,11 @@ import Print_Pins from "../images/Print_Pins.png";
 
 
 function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
+
+    const handleClearError = () => {
+        setErrors([]);
+    }
+    
     return (
         <div id="background-login">
 
@@ -31,7 +36,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                             <div className="sign-about-buttons">
                                 
                                 <Link to="/signup">
-                                    <Button>Signup!</Button>
+                                    <Button onClick={handleClearError}>Signup!</Button>
                                 </Link>
                             </div>
                             <div className="sign-about-buttons">
