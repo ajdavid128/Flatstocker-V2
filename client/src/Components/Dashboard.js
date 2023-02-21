@@ -3,18 +3,18 @@ import DashLowStock from "./DashLowStock";
 import Dribble from "../images/Dribble.png";
 import { Link } from "react-router-dom";
 
-function Dashboard({currentUser, inventory}) {
+function Dashboard({currentUser, inventory, retailers}) {
 
     // let date = new Date().toLocaleDateString();
     let date = new Date().toDateString()
     // let time = new Date().toLocaleTimeString()
-    // console.log()
+    // console.log(retailers.length)
 
     const lowstock = inventory.map((eachInv) => {
         return <DashLowStock key={eachInv.id} {...eachInv}/>
     })
 
-    console.log(currentUser)
+    // console.log(currentUser)
 
     let itemCount = currentUser.items.length;
     let retailerCount = currentUser.unique_retailers.length;
@@ -87,6 +87,16 @@ function Dashboard({currentUser, inventory}) {
                             </div>
                             <div className="item-retail-count-seg-cont">
                                 <Segment className="item-retail-count-seg">
+                                    <h4>Retailers On File:</h4>
+                                    <div className="item-retail-count-number">
+                                        <b>
+                                            {retailers.length}
+                                        </b>
+                                    </div>
+                                </Segment>
+                            </div>
+                            {/* <div className="item-retail-count-seg-cont">
+                                <Segment className="item-retail-count-seg">
                                     <h4>Days Since Last Full Inventory:</h4>
                                     <div className="item-retail-count-number">
                                         <b>
@@ -97,7 +107,7 @@ function Dashboard({currentUser, inventory}) {
                                         <Button size="mini">Reset</Button>
                                     </div>
                                 </Segment>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div id="dash-table-cont">

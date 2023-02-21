@@ -22,7 +22,7 @@ function ModalDeleteItem({handleDeleteItem}) {
             }
         >
             <Modal.Header>Delete Item</Modal.Header>
-            <Modal.Content>ARE YOU ABSOLUTELY SURE YOU WANT TO DO THIS?</Modal.Content>
+            <Modal.Content>Are you sure you want to delete this item?</Modal.Content>
             <Modal.Actions>
                 <Button onClick={() => setOpen(false)}>No Just Kidding!</Button>
                 <Button negative color='red' inverted onClick={handleDeleteAndClose}>
