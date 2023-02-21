@@ -212,7 +212,7 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
                                 />
                             </Form.Group>
                             <div>
-                                {errors? errors.map(e => { return <p key={e}>{e}</p>}) : null}
+                                {errors? errors.map(e => { return <p className="error" key={e}>• {e}</p>}) : null}
                             </div>
                             <div id="invent-form-submit">
                                 <Form.Button>Submit</Form.Button>

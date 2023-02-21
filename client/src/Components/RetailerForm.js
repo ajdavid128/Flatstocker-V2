@@ -88,7 +88,7 @@ function RetailerForm({setRerender, setRetailers, newRetailer, setNewRetailer, e
                                 onChange={handleChange}
                             />
                             <div>
-                                {errors? errors.map(e => { return <p key={e}>{e}</p>}) : null}
+                                {errors? errors.map(e => { return <p className="error" key={e}>• {e}</p>}) : null}
                             </div>
                             <div id="retailer-form-submit">
                                 <Form.Button>Submit</Form.Button>
