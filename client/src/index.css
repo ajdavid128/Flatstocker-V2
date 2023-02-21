@@ -152,6 +152,10 @@ code {
   margin-top: 20px;
 }
 
+.error {
+  color: red;
+}
+
 /* -----------------------GUEST ABOUT PAGE----------------------- */
 
 #about-guest-page{

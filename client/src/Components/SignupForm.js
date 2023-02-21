@@ -120,7 +120,7 @@ function SignupForm({errors, setErrors, setCurrentUser}) {
                                 onChange={handleChange}
                             />
                             <div>
-                                {errors? errors.map(e => { return <p key={e}>{e}</p>}) : null}
+                                {errors && errors? errors && errors.map(e => { return <p className="error" key={e}>• {e}</p>}) : null}
                             </div>
                             <div id="create-account-button">
                                 <Form.Button type="submit">Create Account</Form.Button>

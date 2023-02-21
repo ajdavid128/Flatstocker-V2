@@ -70,7 +70,8 @@ function LoginForm({errors, setErrors, setCurrentUser}) {
                     onChange={handleChange}
                 />
                 <div>
-                    {errors ? <p>{errors}</p> : null}
+                    {errors && errors? <p className="error">{errors}</p> : null}
+                {/* {errors && errors? errors.map(e => { return <p className="error" key={e}>• {e}</p>}) : null} */}
                 </div>
                 <div id="login-form-button">
                     <Form.Button type="submit">Login</Form.Button>
