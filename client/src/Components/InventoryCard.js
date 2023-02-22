@@ -226,7 +226,7 @@ function InventoryCard({id, item_name, image_url, current_stock, minimum_stock, 
       
                 </Card.Content>
                 <Card.Content extra>                
-                {errors? errors.map(e => { return <p key={e}>{e}</p>}) : null}             
+                    {errors? errors.map(e => { return <p key={e}>{e}</p>}) : null}             
                 </Card.Content>
             </Card>
             }

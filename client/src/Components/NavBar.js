@@ -58,10 +58,10 @@ function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
                     <Dropdown item text="Inventory">
                         <Dropdown.Menu>
                             <Link to="/inventory">
-                                <Dropdown.Item>All Inventory</Dropdown.Item>
+                                <Dropdown.Item onClick={handleClearError}>All Inventory</Dropdown.Item>
                             </Link>
                             <Link to="/inventory/itemized">
-                                <Dropdown.Item>Itemized Inventory</Dropdown.Item>
+                                <Dropdown.Item onClick={handleClearError}>Itemized Inventory</Dropdown.Item>
                             </Link>
                             <Link to="/form/new/inventory">
                                 <Dropdown.Item onClick={handleClearError}>Add Inventory</Dropdown.Item>
@@ -71,7 +71,7 @@ function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
                     <Dropdown item text="Retailers">
                         <Dropdown.Menu>
                             <Link to="/retailers">
-                                <Dropdown.Item>All Retailers</Dropdown.Item>
+                                <Dropdown.Item onClick={handleClearError}>All Retailers</Dropdown.Item>
                             </Link>
                             <Link to="form/new/retailer">
                                 <Dropdown.Item onClick={handleClearError}>Add Retailer</Dropdown.Item>
@@ -83,7 +83,7 @@ function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
                         <Dropdown item text="Settings">
                             <Dropdown.Menu>
                                 <Link to="/preferences">
-                                    <Dropdown.Item>User Preferences</Dropdown.Item>
+                                    <Dropdown.Item onClick={handleClearError}>User Preferences</Dropdown.Item>
                                 </Link>
                                 {/* <Link to="/about">
                                     <Dropdown.Item>About Flatstocker</Dropdown.Item>

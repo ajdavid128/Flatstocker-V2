@@ -78,7 +78,7 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
                         onChange={handleEmailChange}
                     />
                     <div>
-                    {errors? errors.map(e => { return <p className="error" key={e}>• {e}</p>}) : null}
+                        {errors? errors.map(e => { return <p className="error" key={e}>• {e}</p>}) : null}
                     </div>
                     <div id="change-email-submit">
                         <Form.Button>Submit New Email</Form.Button>
