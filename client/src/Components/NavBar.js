@@ -53,7 +53,7 @@ function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
 
                 </div>
                     <Link to="/dashboard">
-                        <Menu.Item id="dash-item" name="Dashboard"/>
+                        <Menu.Item id="dash-item" name="Dashboard" onClick={handleClearError}/>
                     </Link>    
                     <Dropdown item text="Inventory">
                         <Dropdown.Menu>
