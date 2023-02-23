@@ -3,13 +3,16 @@ import { useState } from "react";
 
 function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setErrors}) {
 
-    const [newEmail, setNewEmail] = useState({
-        email: "",
+    const [updateUserInfo, setupdateUserInfo] = useState({
+        name: currentUser.name,
+        usernames: currentUser.username,
+        email: currentUser.email,
+        business: currentUser.business_name,
         password: "",
         password_confirmation: ""
     });
 
-    // console.log(newEmail)
+    // console.log(updateUserInfo)
 
     // SENDS PATCH REQUEST FOR EMAIL UPDATE
     const handleEmailSubmit = (e) => {
@@ -19,7 +22,7 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(newEmail)
+            body: JSON.stringify(updateUserInfo)
         })
         .then(res => {
             if(res.ok){
@@ -28,8 +31,11 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
             } else {
                 res.json().then(data => setErrors(data.errors))
             }
-        setNewEmail({
-            email: "",
+        setupdateUserInfo({
+            name: currentUser.name,
+            usernames: currentUser.username,
+            email: currentUser.email,
+            business: currentUser.business_name,
             password: "",
             password_confirmation: ""
         })
@@ -41,8 +47,8 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
         const key = e.target.name;
         const value = e.target.value;
 
-        setNewEmail({
-            ...newEmail, [key]: value
+        setupdateUserInfo({
+            ...updateUserInfo, [key]: value
         })
         // console.log(e.target.value)
     }
@@ -54,11 +60,34 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
                 <Form onSubmit={handleEmailSubmit}>
                     <Form.Field
                         control={Input}
+                        label="Name"
+                        id="name"
+                        name="name"
+                        value={updateUserInfo.name}
+                        onChange={handleEmailChange}
+                    />
+                    <Form.Field
+                        control={Input}
+                        label="Username"
+                        id="username"
+                        name="username"
+                        value={updateUserInfo.username}
+                        onChange={handleEmailChange}
+                    />
+                    <Form.Field
+                        control={Input}
+                        label="Business"
+                        id="business_name"
+                        name="business_name"
+                        value={updateUserInfo.business_name}
+                        onChange={handleEmailChange}
+                    />
+                    <Form.Field
+                        control={Input}
                         label="Please enter new email address:"
                         id="email"
                         name="email"
-                        placeholder="new_email@example.com"
-                        value={newEmail.email}
+                        value={updateUserInfo.email}
                         onChange={handleEmailChange}
                     />
                     <Form.Field 
@@ -66,7 +95,7 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
                         label="Password:"
                         type="password"
                         name="password"
-                        value={newEmail.password}
+                        value={updateUserInfo.password}
                         onChange={handleEmailChange}
                     />
                     <Form.Field 
@@ -74,7 +103,7 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
                         label="Password Confirmation:"
                         type="password"
                         name="password_confirmation"
-                        value={newEmail.password_confirmation}
+                        value={updateUserInfo.password_confirmation}
                         onChange={handleEmailChange}
                     />
                     <div>
