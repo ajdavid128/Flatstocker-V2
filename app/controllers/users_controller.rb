@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     def update
         # byebug
         user = User.find(params[:id])
-        user.update!(update_email)
+        user.update!(update_user_info)
         render json: user, status: :accepted
     end
 
@@ -43,8 +43,8 @@ class UsersController < ApplicationController
         params.permit(:name, :email, :username, :business_name, :password, :password_confirmation)
     end
 
-    def update_email
-        params.permit(:id, :email, :password, :password_confirmation)
+    def update_user_info
+        params.permit(:id, :name, :username, :business_name, :email, :password, :password_confirmation)
     end
 
 end
