@@ -1,13 +1,13 @@
 import { Container, Form, Input } from "semantic-ui-react";
 import { useState } from "react";
 
-function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setErrors}) {
+function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setErrors, handleChangeEmailForm}) {
 
     const [updateUserInfo, setupdateUserInfo] = useState({
-        name: currentUser.name,
-        usernames: currentUser.username,
-        email: currentUser.email,
-        business: currentUser.business_name,
+        name: "",
+        usernames: "",
+        email: "",
+        business: "",
         password: "",
         password_confirmation: ""
     });
@@ -31,6 +31,7 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
             } else {
                 res.json().then(data => setErrors(data.errors))
             }
+        handleChangeEmailForm();
         setupdateUserInfo({
             name: currentUser.name,
             usernames: currentUser.username,
@@ -63,6 +64,7 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
                         label="Name"
                         id="name"
                         name="name"
+                        placeholder={currentUser.name}
                         value={updateUserInfo.name}
                         onChange={handleEmailChange}
                     />
@@ -71,6 +73,7 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
                         label="Username"
                         id="username"
                         name="username"
+                        placeholder={currentUser.username}
                         value={updateUserInfo.username}
                         onChange={handleEmailChange}
                     />
@@ -79,6 +82,7 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
                         label="Business"
                         id="business_name"
                         name="business_name"
+                        placeholder={currentUser.business_name}
                         value={updateUserInfo.business_name}
                         onChange={handleEmailChange}
                     />
@@ -87,6 +91,7 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
                         label="Please enter new email address:"
                         id="email"
                         name="email"
+                        placeholder={currentUser.email}
                         value={updateUserInfo.email}
                         onChange={handleEmailChange}
                     />
@@ -95,6 +100,7 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
                         label="Password:"
                         type="password"
                         name="password"
+                        placeholder="**********"
                         value={updateUserInfo.password}
                         onChange={handleEmailChange}
                     />
@@ -103,6 +109,7 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
                         label="Password Confirmation:"
                         type="password"
                         name="password_confirmation"
+                        placeholder="**********"
                         value={updateUserInfo.password_confirmation}
                         onChange={handleEmailChange}
                     />

@@ -81,7 +81,7 @@ function UserPreferences({errors, setErrors, currentUser, setCurrentUser, setUpd
                     <Segment.Group>
                         <Segment size="huge">
                             <u>
-                                <b>Change Email Address</b>
+                                <b>Change User Information</b>
                             </u>
                         </Segment>
                         <Segment>
@@ -89,7 +89,7 @@ function UserPreferences({errors, setErrors, currentUser, setCurrentUser, setUpd
                             </Button>
                             <br/>
                             {displayEmailForm ? 
-                                <Segment><ChangeEmail currentUser={currentUser} updateEmail={updateEmail} setUpdateEmail={setUpdateEmail} errors={errors} setErrors={setErrors}/>
+                                <Segment><ChangeEmail currentUser={currentUser} updateEmail={updateEmail} setUpdateEmail={setUpdateEmail} errors={errors} setErrors={setErrors} handleChangeEmailForm={handleChangeEmailForm}/>
                                 </Segment> : 
                                     null}
                         </Segment>
