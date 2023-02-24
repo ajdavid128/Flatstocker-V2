@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Button, Container, Divider, Image, Segment } from "semantic-ui-react";
 import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
@@ -7,6 +8,8 @@ import Print_Pins from "../images/Print_Pins.png";
 
 
 function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
+
+    const [toggleLoginSignup, setToggleLoginSignup] = useState(false);
 
     const handleClearError = () => {
         setErrors([]);
@@ -34,6 +37,10 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                         <Divider horizontal>OR</Divider>
                         <div id="sign-up-about">
                             <div className="sign-about-buttons">
+
+                            
+                                {/* <Button onClick={handleClearError}>Signup!</Button> */}
+                               
                                 
                                 <Link to="/signup">
                                     <Button onClick={handleClearError}>Signup!</Button>
@@ -48,11 +55,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                         </div>
                     </Segment>
                 </div>
-            </div>
-
-            
-
-            
+            </div>   
         </div>
         </div>
     )

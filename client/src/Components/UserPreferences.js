@@ -81,11 +81,11 @@ function UserPreferences({errors, setErrors, currentUser, setCurrentUser, setUpd
                     <Segment.Group>
                         <Segment size="huge">
                             <u>
-                                <b>Change User Information</b>
+                                <b>Change User Details</b>
                             </u>
                         </Segment>
                         <Segment>
-                            <Button onClick={handleChangeEmailForm}>{!buttonText ? "Change Email" : "Hide Form"}
+                            <Button onClick={handleChangeEmailForm}>{!buttonText ? "Change Details" : "Hide Form"}
                             </Button>
                             <br/>
                             {displayEmailForm ? 

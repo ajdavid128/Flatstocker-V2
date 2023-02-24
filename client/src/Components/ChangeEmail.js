@@ -117,7 +117,7 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
                         {errors? errors.map(e => { return <p className="error" key={e}>• {e}</p>}) : null}
                     </div>
                     <div id="change-email-submit">
-                        <Form.Button>Submit New Email</Form.Button>
+                        <Form.Button>Submit Changes</Form.Button>
                     </div>
                 </Form>
                 
