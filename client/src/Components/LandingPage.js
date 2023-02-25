@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Button, Container, Divider, Image, Segment } from "semantic-ui-react";
 import LoginForm from "./LoginForm";
-import SignupForm from "./SignupForm";
+import SignupForm from "./SignupForm2";
 import FlatStocker from "../images/FlatStocker.png";
 import Print_Pins from "../images/Print_Pins.png";
 
