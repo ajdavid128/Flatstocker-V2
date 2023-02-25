@@ -11,6 +11,10 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
 
     let navigate = useNavigate();
 
+    // **************************************************************** 
+    // STATE CODE
+    // **************************************************************** 
+
     const [toggleLoginSignup, setToggleLoginSignup] = useState(true);
     const [newUser, setNewUser] = useState({
         name: "",
@@ -20,6 +24,54 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
         password: "",
         password_confirmation: ""
     })
+    const [user, setUser] = useState({
+        username: "",
+        password: ""
+    });
+
+    // **************************************************************** 
+    // LOGIN CODE
+    // **************************************************************** 
+
+    const handleLoginChange = (e) => {
+        const key = e.target.name;
+        const value = e.target.value;
+
+        setUser({
+            ...user, [key]: value
+        })
+    };
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        fetch("/login", {
+            method: "POST",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(user)
+        })
+        .then(res =>{
+            if(res.ok){
+                res.json().then(user => {
+                    setCurrentUser(user);
+                    navigate("/dashboard");
+                })
+            } else {
+                res.json().then(data =>{
+                    for (const key in data){
+                        setErrors(data[key]);
+                    }
+                })
+            }
+        });
+        setUser({
+            username: "",
+            password: ""
+        });
+    };
+
+    // **************************************************************** 
+    // SIGNUP CODE
+    // **************************************************************** 
 
     const handleSignup = (e) => {
         e.preventDefault();
@@ -48,7 +100,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
         })
     };
 
-    const handleChange = (e) => {
+    const handleSignupChange = (e) => {
         const key = e.target.name;
         const value = e.target.value;
 
@@ -78,11 +130,43 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
             <div >
                 <div id="land-container">
                     <Segment id="land-seg">
-                        <LoginForm 
+                        {/* <LoginForm 
                             setCurrentUser={setCurrentUser}
                             errors={errors}
                             setErrors={setErrors}
-                        />
+                        /> */}
+                        <Container>
+                            <h1 id="login-title" >Please Login</h1>
+                            <Form onSubmit={handleLogin}>
+                                <Form.Field 
+                                    control={Input}
+                                    label="Username:"
+                                    name="username"
+                                    placeholder="Username"
+                                    value={user.username}
+                                    onChange={handleLoginChange}
+                                />
+                                <Form.Field 
+                                    control={Input}
+                                    label="Password:"
+                                    type="password"
+                                    name="password"
+                                    placeholder="Password"
+                                    value={user.password}
+                                    onChange={handleLoginChange}
+                                />
+                                <div>
+                                    {errors && errors? <p className="error"> {errors}</p> : null}
+                                {/* {errors && errors? errors.map(e => { return <p className="error" key={e}>• {e}</p>}) : null} */}
+                                </div>
+                                <div id="login-form-button">
+                                    <Form.Button type="submit">Login</Form.Button>
+                                </div>
+                                
+                            </Form>
+
+                        </Container>
+
                         <Divider horizontal>OR</Divider>
                         <div id="sign-up-about">
                             <div className="sign-about-buttons">
@@ -131,7 +215,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                                 name="name"
                                 placeholder="Jon Smith"
                                 value={newUser.name}
-                                onChange={handleChange}
+                                onChange={handleSignupChange}
                             />
                             <Form.Field 
                                 control={Input}
@@ -140,7 +224,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                                 name="email"
                                 placeholder="print@example.com"
                                 value={newUser.email}
-                                onChange={handleChange}
+                                onChange={handleSignupChange}
                             />
                             <Form.Field 
                                 control={Input}
@@ -149,7 +233,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                                 name="business_name"
                                 placeholder="Print Shop"
                                 value={newUser.business_name}
-                                onChange={handleChange}
+                                onChange={handleSignupChange}
                             />
                             <Form.Field 
                                 control={Input}
@@ -158,7 +242,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                                 name="username"
                                 placeholder="anythingYoUw4nT!"
                                 value={newUser.username}
-                                onChange={handleChange}
+                                onChange={handleSignupChange}
                             />
                             <Form.Field 
                                 control={Input}
@@ -166,7 +250,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                                 type="password"
                                 name="password"
                                 value={newUser.password}
-                                onChange={handleChange}
+                                onChange={handleSignupChange}
                             />
                             <Form.Field 
                                 control={Input}
@@ -174,7 +258,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                                 type="password"
                                 name="password_confirmation"
                                 value={newUser.password_confirmation}
-                                onChange={handleChange}
+                                onChange={handleSignupChange}
                             />
                             <div>
                                 {errors && errors? errors && errors.map(e => { return <p className="error" key={e}>• {e}</p>}) : null}
