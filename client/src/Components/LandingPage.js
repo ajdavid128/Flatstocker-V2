@@ -28,7 +28,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
             
             <div >
                 <div id="land-container">
-                    <Segment>
+                    <Segment id="land-seg">
                         <Image src={FlatStocker} size="huge"/>
                         <Divider></Divider>
 
@@ -37,6 +37,10 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                             errors={errors}
                             setErrors={setErrors}
                         />
+                        <Divider horizontal>OR</Divider>
+                        <div className="sign-about-buttons">
+                            <Button onClick={handleClearError}>Signup!</Button>
+                        </div>
                     </Segment>
 
                     {/* <Segment id="land-seg">

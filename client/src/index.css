@@ -69,16 +69,15 @@ code {
   /* background-color: #BE5A38; */
 }
 
-#logo-seg {
+/* #logo-seg {
   background-color: #E8E3CC;
-}
+} */
 
-#landing-logo {
-  /* margin-top: 80px; */
+/* #landing-logo {
   padding-top: 80px;
   display: flex;
   justify-content: center;
-}
+} */
 
 #land-container {
   display: flex;
@@ -86,8 +85,8 @@ code {
 }
 
 #land-seg {
-  max-width: 400px;
-  margin-top: 60px;
+  max-width: 600px;
+  margin-top: 150px;
   /* background-color: #E8E3CC; */
 }
 
@@ -501,7 +500,7 @@ background-color: #E8E3CC;
   background-color: #BE5A38;
 }
 
-/* -----------------------CHANGE EMAIL FORM----------------------- */
+/* -----------------------CHANGE USER DETAILS FORM----------------------- */
 
 #change-email-submit {
   display: flex;
