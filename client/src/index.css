@@ -87,7 +87,7 @@ code {
 #land-seg {
   max-width: 600px;
   margin-top: 150px;
-  /* background-color: #E8E3CC; */
+  /* overflow-y: auto; */
 }
 
 #login-title {

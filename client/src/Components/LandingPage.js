@@ -12,38 +12,61 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
     const [toggleLoginSignup, setToggleLoginSignup] = useState(false)
 
     const handleClearError = () => {
+        setToggleLoginSignup(!toggleLoginSignup)
         setErrors([]);
     }
     
     return (
         <div id="background-login">
+            <div id="landing-page">          
+                <div>
+                    <div id="land-container">
+                        <Segment id="land-seg">
+                            <Image src={FlatStocker} size="huge"/>
+                            <Divider></Divider>
+                            {toggleLoginSignup ? 
+                                <>
+                                    <LoginForm 
+                                        setCurrentUser={setCurrentUser}
+                                        errors={errors}
+                                        setErrors={setErrors}
+                                    />
+                                    <Divider horizontal>OR</Divider>
+                                    <div className="sign-about-buttons">
+                                        <Button onClick={handleClearError}>Signup!</Button>
+                                    </div>
+                                </>
+                                :
+                                <>
+                                    <SignupForm 
+                                    setCurrentUser={setCurrentUser}
+                                    errors={errors}
+                                    setErrors={setErrors}
+                                    />
+                                    <Divider horizontal>OR</Divider>
+                                    <div className="sign-about-buttons">
+                                        <Button onClick={handleClearError}>Login</Button>
+                                    </div>
+                                </>
+                            }
+                        </Segment>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    )
+};
 
-        <div id="landing-page">
-            
-            {/* <div id="landing-logo">
+export default LandingPage;
+
+
+{/* <div id="landing-logo">
                 <Segment id="logo-seg">
                     <Image src={FlatStocker} size="huge"/>
                 </Segment>
             </div> */}
-            
-            <div >
-                <div id="land-container">
-                    <Segment id="land-seg">
-                        <Image src={FlatStocker} size="huge"/>
-                        <Divider></Divider>
 
-                        <LoginForm 
-                            setCurrentUser={setCurrentUser}
-                            errors={errors}
-                            setErrors={setErrors}
-                        />
-                        <Divider horizontal>OR</Divider>
-                        <div className="sign-about-buttons">
-                            <Button onClick={handleClearError}>Signup!</Button>
-                        </div>
-                    </Segment>
-
-                    {/* <Segment id="land-seg">
+ {/* <Segment id="land-seg">
                         <LoginForm 
                             setCurrentUser={setCurrentUser}
                             errors={errors}
@@ -69,11 +92,3 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                             </div>
                         </div>
                     </Segment> */}
-                </div>
-            </div>  
-        </div>
-        </div>
-    )
-};
-
-export default LandingPage;
