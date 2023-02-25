@@ -9,10 +9,9 @@ import Print_Pins from "../images/Print_Pins.png";
 
 function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
 
-    const [toggleLoginSignup, setToggleLoginSignup] = useState(true);
-
     let navigate = useNavigate();
 
+    const [toggleLoginSignup, setToggleLoginSignup] = useState(true);
     const [newUser, setNewUser] = useState({
         name: "",
         email: "",
