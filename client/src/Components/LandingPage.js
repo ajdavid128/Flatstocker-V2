@@ -9,7 +9,7 @@ import Print_Pins from "../images/Print_Pins.png";
 
 function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
 
-    const [toggleLoginSignup, setToggleLoginSignup] = useState(false)
+    const [toggleLoginSignup, setToggleLoginSignup] = useState(true)
 
     const handleClearError = () => {
         setToggleLoginSignup(!toggleLoginSignup)

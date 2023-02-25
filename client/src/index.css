@@ -85,9 +85,10 @@ code {
 }
 
 #land-seg {
+  max-height: 470px;
   max-width: 600px;
   margin-top: 150px;
-  /* overflow-y: auto; */
+  overflow-y: auto;
 }
 
 #login-title {
