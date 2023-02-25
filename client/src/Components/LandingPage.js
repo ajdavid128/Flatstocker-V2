@@ -20,15 +20,26 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
 
         <div id="landing-page">
             
-            <div id="landing-logo">
+            {/* <div id="landing-logo">
                 <Segment id="logo-seg">
                     <Image src={FlatStocker} size="huge"/>
                 </Segment>
-            </div>
+            </div> */}
             
             <div >
                 <div id="land-container">
-                    <Segment id="land-seg">
+                    <Segment>
+                        <Image src={FlatStocker} size="huge"/>
+                        <Divider></Divider>
+
+                        <LoginForm 
+                            setCurrentUser={setCurrentUser}
+                            errors={errors}
+                            setErrors={setErrors}
+                        />
+                    </Segment>
+
+                    {/* <Segment id="land-seg">
                         <LoginForm 
                             setCurrentUser={setCurrentUser}
                             errors={errors}
@@ -42,18 +53,18 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                                 <Button onClick={handleClearError}>Signup!</Button>
                                
                                 
-                                {/* <Link to="/signup">
+                                <Link to="/signup">
                                     <Button onClick={handleClearError}>Signup!</Button>
-                                </Link> */}
+                                </Link>
                             </div>
                             <div className="sign-about-buttons">
                                 
-                                {/* <Link to="/info">
+                                <Link to="/info">
                                     <Button>About Page</Button>
-                                </Link> */}
+                                </Link>
                             </div>
                         </div>
-                    </Segment>
+                    </Segment> */}
                 </div>
             </div>  
         </div>
