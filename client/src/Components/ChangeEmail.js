@@ -31,12 +31,12 @@ function ChangeEmail({currentUser, setUpdateEmail, updateEmail, errors, setError
             } else {
                 res.json().then(data => setErrors(data.errors))
             }
-        handleChangeEmailForm();
+        // handleChangeEmailForm();
         setupdateUserInfo({
-            name: currentUser.name,
-            usernames: currentUser.username,
-            email: currentUser.email,
-            business: currentUser.business_name,
+            name: "",
+            usernames: "",
+            email: "",
+            business: "",
             password: "",
             password_confirmation: ""
         })
