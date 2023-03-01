@@ -1,4 +1,4 @@
-import { Container, Divider, Form, Input, Segment, Select, Button } from "semantic-ui-react";
+import { Container, Divider, Form, Input, Segment, Select, Button, Popup, Icon } from "semantic-ui-react";
 import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
 
@@ -63,7 +63,7 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
         // console.log(e.target.value)
     };
     
-
+    const iconTag = <p>Category: <Popup content='Add users to your feed' trigger={<Icon name='tags' />} /></p>
 
     return (
         <div id="inventory-form-page">
@@ -105,13 +105,14 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
                                 />
                                 <Form.Input 
                                     control={Input}
-                                    label="Category:"
+                                    label={iconTag}
                                     type="text"
                                     name="category"
                                     placeholder="Ink"
                                     value={newItem.category}
                                     onChange={handleChange}
                                 />
+                                <Popup id="cat-icon" content='Add users to your feed' trigger={<Icon name='tags' />} />
                             </Form.Group>
                             <Form.Group>
                             <Form.Input 
