@@ -10,7 +10,7 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
     
     // "currentUser.unique_retailers" <- use this in place of "retailers" to map over if I want to only display which retailers a user already utilizes with their inventory
 
-    console.log(Object.keys(currentUser.all_item_categories))
+    // console.log(Object.keys(currentUser.all_item_categories))
 
     const handleRetailers = retailers.map((r) => {
         return (
@@ -72,6 +72,10 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
             )
         })
     }
+
+    const testing = Object.keys(currentUser.all_item_categories).join(", ");
+
+    console.log(testing)
    
     return (
         <div id="inventory-form-page">
@@ -111,6 +115,8 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
                                     value={newItem.color}
                                     onChange={handleChange}
                                 />
+                                <Popup
+                                trigger={
                                 <Form.Input 
                                     control={Input}
                                     label="Category:"
@@ -119,8 +125,12 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
                                     placeholder="Ink"
                                     value={newItem.category}
                                     onChange={handleChange}
+                                />}
+                                    header='Existing Categories In Your Inventory:'
+                                    content={testing}
+                                    on='focus'
                                 />
-                                <Popup id="cat-icon" content={itemCategories} trigger={<Icon name='tags' />} />
+                                {/* <Popup id="cat-icon" content={testing} trigger={<Icon name='tags' />}/> */}
                             </Form.Group>
                             <Form.Group>
                             <Form.Input 
