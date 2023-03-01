@@ -22,6 +22,19 @@ const { compare } = Intl.Collator('en-US');
                 <h1 id="inventory-header-text">Inventory</h1>
                 <Image className="inventory-header-images" src={Inky_knives}/>
             </div>
+
+            <div>
+                <Segment.Group>
+                    <Segment>Legend</Segment>
+                    <Segment.Group horizontal>
+                        <Segment>Left</Segment>
+                        <Segment>Middle</Segment>
+                        <Segment>Middle</Segment>
+                        <Segment>Right</Segment>
+                    </Segment.Group>
+                </Segment.Group>
+            </div>
+
             <div id="inventory-table-cont">
                 <Segment id="inventory-table-seg">
                     <Table celled selectable collapsing>
