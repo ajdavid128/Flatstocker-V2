@@ -25,10 +25,10 @@ const { compare } = Intl.Collator('en-US');
 
             <div id="legend">
                     <Segment.Group raised>
-                        <Segment>White: Stock Levels are Normal</Segment>
+                        <Segment>White: Stock Levels Normal</Segment>
                         <Segment inverted color='green' tertiary>Green: Recently Added/Updated Item</Segment>
                         <Segment inverted color='yellow' tertiary>Yellow: Stock Level Approaching Minimum</Segment>
-                        <Segment inverted color='red' tertiary>Red: Stock Level at or Below Minimum</Segment>
+                        <Segment inverted color='red' tertiary>Red: Stock Level At/Below Minimum</Segment>
                     </Segment.Group>   
             </div>
 

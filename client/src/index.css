@@ -306,8 +306,10 @@ code {
 }
 
 #legend {
-  max-width: 300px;
-  
+  display: flex;
+  justify-content: center;
+  /* max-width: 300px; */
+  margin-bottom: 40px;
 }
 
 #inventory-table-cont {
