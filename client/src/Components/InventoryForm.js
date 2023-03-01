@@ -10,6 +10,8 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
     
     // "currentUser.unique_retailers" <- use this in place of "retailers" to map over if I want to only display which retailers a user already utilizes with their inventory
 
+    console.log(Object.keys(currentUser.all_item_categories))
+
     const handleRetailers = retailers.map((r) => {
         return (
             <option key={r.id} value={r.id} >
@@ -63,8 +65,14 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
         // console.log(e.target.value)
     };
     
-    const iconTag = <p>Category: <Popup content='Add users to your feed' trigger={<Icon name='tags' />} /></p>
-
+    const itemCategories = () => {
+        Object.keys(currentUser.all_item_categories).map((cat)=> {
+            return(
+                <>{cat}</>
+            )
+        })
+    }
+   
     return (
         <div id="inventory-form-page">
             <div>
@@ -105,14 +113,14 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
                                 />
                                 <Form.Input 
                                     control={Input}
-                                    label={iconTag}
+                                    label="Category:"
                                     type="text"
                                     name="category"
                                     placeholder="Ink"
                                     value={newItem.category}
                                     onChange={handleChange}
                                 />
-                                <Popup id="cat-icon" content='Add users to your feed' trigger={<Icon name='tags' />} />
+                                <Popup id="cat-icon" content={itemCategories} trigger={<Icon name='tags' />} />
                             </Form.Group>
                             <Form.Group>
                             <Form.Input 
