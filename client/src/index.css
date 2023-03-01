@@ -305,8 +305,9 @@ code {
   margin: 30px;
 }
 
-#all-inventory-page{
-  /* height: 100vh; */
+#legend {
+  max-width: 300px;
+  
 }
 
 #inventory-table-cont {
