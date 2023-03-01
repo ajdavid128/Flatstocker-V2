@@ -65,17 +65,9 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
         // console.log(e.target.value)
     };
     
-    const itemCategories = () => {
-        Object.keys(currentUser.all_item_categories).map((cat)=> {
-            return(
-                <>{cat}</>
-            )
-        })
-    }
 
-    const testing = Object.keys(currentUser.all_item_categories).join(", ");
+    const itemCategories = Object.keys(currentUser.all_item_categories).join(", ");
 
-    console.log(testing)
    
     return (
         <div id="inventory-form-page">
@@ -126,11 +118,10 @@ function InventoryForm({newItem, setNewItem, retailers, setInventory, errors, se
                                     value={newItem.category}
                                     onChange={handleChange}
                                 />}
-                                    header='Existing Categories In Your Inventory:'
-                                    content={testing}
+                                    header='Existing Categories:'
+                                    content={itemCategories}
                                     on='focus'
                                 />
-                                {/* <Popup id="cat-icon" content={testing} trigger={<Icon name='tags' />}/> */}
                             </Form.Group>
                             <Form.Group>
                             <Form.Input 
