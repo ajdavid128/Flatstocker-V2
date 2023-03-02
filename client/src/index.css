@@ -4,22 +4,6 @@
 }
 
 
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #E8E3CC;
-  height: 100vh;
-  color: #E8E3CC;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
 
 #app-component {
   background-color: #E8E3CC;
@@ -34,13 +18,10 @@ code {
 
 #nav-logo-cont {
   margin: 10px;
-  /* margin-left: 10px;
-  margin-top: 5px; */
 }
 
 #nav-logo {
   max-width: 50px;
-  /* padding-bottom: 10px; */
 }
 
 #space {
@@ -51,10 +32,6 @@ code {
   margin-top: 17px;
 }
 
-/* #nav-tape-image {
-  max-height: 40px;
-  margin-top: 5px;
-} */
 
 /* -----------------------LANDING PAGE----------------------- */
 #background-login {
@@ -66,18 +43,7 @@ code {
   height: 100vh;
   background: url("./images/Print_Pins.png");
   background-size: contain;
-  /* background-color: #BE5A38; */
 }
-
-/* #logo-seg {
-  background-color: #E8E3CC;
-} */
-
-/* #landing-logo {
-  padding-top: 80px;
-  display: flex;
-  justify-content: center;
-} */
 
 #land-container {
   display: flex;
@@ -102,9 +68,6 @@ code {
   margin: 20px;
 }
 
-/* #sign-up-about {
-  columns: 100px 2;
-} */
 
 .sign-about-buttons {
   display: flex;
@@ -114,17 +77,13 @@ code {
 /* -----------------------SIGN UP FORM----------------------- */
 
 #signup-page{
-  /* height: 100vh; */
   background: url("./images/Print_Pins.png");
   background-size: contain;
-  /* background-color: #E8E3CC; */
 }
 
 #signup-cont {
   padding-top: 50px;
   padding-bottom: 100px;
-  /* display: flex; */
-  /* justify-content: center; */
 }
 
 #signup-title {
@@ -134,8 +93,6 @@ code {
 
 #signup-seg {
   max-width: 500px;
-  /* padding-top: 120px; */
-  /* margin-top: 120px; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -184,25 +141,21 @@ code {
 
 #dash-grid-cont {
   margin: auto;
-  /* background-color: rgb(192, 191, 217); */
   max-width: 1100px;
 }
 
 #dash-grid-layout {
   display: grid;
-  /* grid-template-columns: 2fr 1fr; */
   grid-template-rows: 1fr 4fr 3fr;
   height: 80vh;
 }
 
 #dash-welcome-cont {
   display: flex;
-  /* justify-content: center; */
   margin: 20px;
 }
 
 #avatar-div-cont {
-  /* margin-left: 10px; */
 }
 
 #welcome-avatar {
@@ -246,7 +199,6 @@ code {
 }
 
 #dash-itemRetCoun-cont {
-  /* margin: 20px; */
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 80px;
@@ -308,7 +260,6 @@ code {
 #legend {
   display: flex;
   justify-content: center;
-  /* max-width: 300px; */
   margin-bottom: 40px;
 }
 
@@ -372,7 +323,6 @@ code {
   max-height: 600px;
   max-width: 1300px;
   overflow-y: auto;
-  /* background-color: #E8E3CC; */
 }
 
 #itemized-spacer {
@@ -449,9 +399,6 @@ height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
-  grid-gap: 20px; */
 }
 
 .item-card-image {
