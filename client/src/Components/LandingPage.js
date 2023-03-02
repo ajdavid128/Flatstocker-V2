@@ -5,6 +5,7 @@ import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm2";
 import FlatStocker from "../images/FlatStocker.png";
 import Print_Pins from "../images/Print_Pins.png";
+import SideBarNav from "./SideBarNav";
 
 
 function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
@@ -17,6 +18,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
     }
     
     return (
+      
         <div id="background-login">
             <div id="landing-page">          
                 <div>
@@ -54,6 +56,7 @@ function LandingPage({errors, setErrors, currentUser, setCurrentUser}) {
                 </div>  
             </div>
         </div>
+ 
     )
 };
 

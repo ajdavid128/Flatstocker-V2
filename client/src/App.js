@@ -16,6 +16,7 @@ import LoginForm from './Components/LoginForm';
 import NotFound from './Components/NotFound';
 import PleaseLogin from './Components/PleaseLogin';
 import AboutGuest from './Components/AboutGuest';
+import SideBarNav from './Components/SideBarNav';
 
 
 function App() {
@@ -100,22 +101,28 @@ const itemizedFilterArray = inventory.filter((eachInv) => {
     <BrowserRouter>
       <div id="app-component">
         <Routes>
-          <Route index element={
-              <LandingPage 
-                currentUser={currentUser}
-                setCurrentUser={setCurrentUser}
-                errors={errors}
-                setErrors={setErrors}
-              />}/>
-          <Route path="signup" element={
+      
+            <Route index element={
+                <LandingPage 
+                  currentUser={currentUser}
+                  setCurrentUser={setCurrentUser}
+                  errors={errors}
+                  setErrors={setErrors}
+                />}/>
+         
+          {/* <Route path="signup" element={
               <SignupForm
                 currentUser={currentUser}
                 setCurrentUser={setCurrentUser}
                 errors={errors}
                 setErrors={setErrors}
               />
-            }/>
-          <Route path="info" element={<AboutGuest />}/>
+            }/> */}
+
+          {/* <Route path="info" element={<AboutGuest />}/> */}
+
+
+
         {currentUser && currentUser ? <>
           <Route path="/" element={
             <NavBar 
