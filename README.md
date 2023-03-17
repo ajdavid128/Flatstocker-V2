@@ -1,5 +1,6 @@
 ![Reference Image](./client/src/images/logo.png)
 # FlatStocker
+Demo Video: https://www.youtube.com/watch?v=qku3_7ze-NQ
 
 > **Languages:** JavaScript | Ruby | HTML5 | CSS
 
