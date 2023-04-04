@@ -26,17 +26,17 @@ function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
     setErrors([]);
 };
 
-  const LandingNav = () => {
-    return (
-        <>           
-            <Menu.Item name="About"/>
-            <Menu.Menu position="right">
-                <Menu.Item name="Login"/>
-                {/* ADD LINK ROUTE TO SIGNUP PAGE/LOGIN PAGE */}
-            </Menu.Menu>
-        </>
-    )
-  }
+//   const LandingNav = () => {
+//     return (
+//         <>           
+//             <Menu.Item name="About"/>
+//             <Menu.Menu position="right">
+//                 <Menu.Item name="Login"/>
+//                 {/* ADD LINK ROUTE TO SIGNUP PAGE/LOGIN PAGE */}
+//             </Menu.Menu>
+//         </>
+//     )
+//   }
 
     
     return (

@@ -47,20 +47,22 @@ function RetailerCard({id, retailer_name, website_url, phone, email, errors, set
         setToggleEdit(!toggleEdit)
     };
 
-    const handleDeleteRetailer = () => {
-        fetch(`/retailers/${id}`, {
-            method: 'DELETE'
-        })
-        .then(res => {
-            if(res.ok){
-                res.json().then(data => {
-                    setRerender(data)
-                })
-            } else {
-                res.json().then(console.log("oops, it's a no go"))
-            }
-        })
-    };
+    // const handleDeleteRetailer = () => {
+    //     fetch(`/retailers/${id}`, {
+    //         method: 'DELETE'
+    //     })
+    //     .then(res => {
+    //         if(res.ok){
+    //             res.json().then(data => {
+    //                 setRerender(data)
+    //             })
+    //         } else {
+    //             res.json().then(console.log("oops, it's a no go"))
+    //         }
+    //     })
+    // };
+    // ^^ The functionality of this DELETE request does work, but the associations/Models in the backend must be reorganized so that retailers will delete for individual users, not ALL users.
+
 
     return (
         <div>

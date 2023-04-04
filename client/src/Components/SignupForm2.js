@@ -1,4 +1,4 @@
-import { Container, Image, Form, Input} from "semantic-ui-react";
+import { Container, Form, Input} from "semantic-ui-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import FlatStocker from "../images/FlatStocker.png";
@@ -52,9 +52,10 @@ function SignupForm({errors, setErrors, setCurrentUser}) {
         })
     };
 
-    const handleClearError = () => {
-        setErrors([]);
-    }
+    // const handleClearError = () => {
+    //     setErrors([]);
+    // }
+    // Not currently using this function
 
 
     return (       
