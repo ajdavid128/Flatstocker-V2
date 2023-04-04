@@ -1,5 +1,5 @@
 import { Card, Label, Icon, Form, Input } from "semantic-ui-react";
-import ModalDeleteRetailer from "./ModelDeleteRetailer";
+// import ModalDeleteRetailer from "./ModelDeleteRetailer";
 import { useState } from "react";
 
 function RetailerCard({id, retailer_name, website_url, phone, email, errors, setErrors, setUpdateRetailer, setRerender, retailers}) {

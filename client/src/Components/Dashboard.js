@@ -1,4 +1,4 @@
-import { Image, Button, Segment, Table } from "semantic-ui-react";
+import { Image, Segment, Table } from "semantic-ui-react";
 import DashLowStock from "./DashLowStock";
 import Dribble from "../images/Dribble.png";
 import { Link } from "react-router-dom";

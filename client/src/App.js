@@ -10,13 +10,13 @@ import ItemizedInventory from './Components/ItemizedInventory';
 import LandingPage from './Components/LandingPage';
 import RetailerForm from './Components/RetailerForm';
 import Retailers from './Components/Retailers';
-import SignupForm from './Components/SignupForm';
+// import SignupForm from './Components/SignupForm';
 import UserPreferences from './Components/UserPreferences';
 import LoginForm from './Components/LoginForm';
 import NotFound from './Components/NotFound';
 import PleaseLogin from './Components/PleaseLogin';
-import AboutGuest from './Components/AboutGuest';
-import SideBarNav from './Components/SideBarNav';
+// import AboutGuest from './Components/AboutGuest';
+// import SideBarNav from './Components/SideBarNav';
 
 
 function App() {

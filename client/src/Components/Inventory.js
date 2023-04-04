@@ -1,5 +1,5 @@
-import { Image, Container, Table, Segment } from "semantic-ui-react";
-import InventoryCard from "./InventoryCard";
+import { Image, Table, Segment } from "semantic-ui-react";
+// import InventoryCard from "./InventoryCard";
 import InventoryTable from "./InventoryTable";
 import Inky_knives from "../images/Inky_knives.png";
 

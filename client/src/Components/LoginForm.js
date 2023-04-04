@@ -1,4 +1,4 @@
-import { Container, Form, Input, Button } from 'semantic-ui-react';
+import { Container, Form, Input } from 'semantic-ui-react';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 

@@ -1,7 +1,7 @@
-import { Container, Image, Form, Input, Button, Segment, Divider } from "semantic-ui-react";
+import { Container, Image, Form, Input} from "semantic-ui-react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import FlatStocker from "../images/FlatStocker.png";
+import { useNavigate } from "react-router-dom";
+// import FlatStocker from "../images/FlatStocker.png";
 
 function SignupForm({errors, setErrors, setCurrentUser}) {
 

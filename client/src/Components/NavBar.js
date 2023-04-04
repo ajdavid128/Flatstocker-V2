@@ -1,7 +1,7 @@
 import { Dropdown, Image, Menu } from "semantic-ui-react";
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import Fs_logo from "../images/Fs_logo.png";
-import Tape from "../images/Tape.png";
+// import Tape from "../images/Tape.png";
 
 
 function NavBar({currentUser, setCurrentUser, errors, setErrors}) {
