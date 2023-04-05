@@ -101,28 +101,14 @@ const itemizedFilterArray = inventory.filter((eachInv) => {
     <BrowserRouter>
       <div id="app-component">
         <Routes>
-      
-            <Route index element={
-                <LandingPage 
-                  currentUser={currentUser}
-                  setCurrentUser={setCurrentUser}
-                  errors={errors}
-                  setErrors={setErrors}
-                />}/>
-         
-          {/* <Route path="signup" element={
-              <SignupForm
+          <Route index element={
+              <LandingPage 
                 currentUser={currentUser}
                 setCurrentUser={setCurrentUser}
                 errors={errors}
                 setErrors={setErrors}
-              />
-            }/> */}
-
-          {/* <Route path="info" element={<AboutGuest />}/> */}
-
-
-
+              />}
+          />
         {currentUser && currentUser ? <>
           <Route path="/" element={
             <NavBar 
