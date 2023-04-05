@@ -50,7 +50,7 @@ function LoginForm({errors, setErrors, setCurrentUser}) {
 
     return (
         <Container>
-            <h1 id="login-title" >Please Login</h1>
+            <h1 id="login-title" >Login</h1>
             <Form onSubmit={handleLogin}>
                 <Form.Field 
                     control={Input}

@@ -60,7 +60,7 @@ function SignupForm({errors, setErrors, setCurrentUser}) {
 
     return (       
         <Container>
-            <h1 id="signup-title">Please Sign Up</h1>
+            <h1 id="signup-title">Sign Up</h1>
             <Form onSubmit={handleSignup}>
                 <Form.Field 
                     control={Input}
