@@ -23,14 +23,14 @@ const { compare } = Intl.Collator('en-US');
                 <Image className="inventory-header-images" src={Inky_knives}/>
             </div>
 
-            <div id="legend">
+            {/* <div id="legend">
                     <Segment.Group raised>
                         <Segment>White: Stock Levels Normal</Segment>
                         <Segment inverted color='green' tertiary>Green: Recently Added/Updated Item</Segment>
                         <Segment inverted color='yellow' tertiary>Yellow: Stock Level Approaching Minimum</Segment>
                         <Segment inverted color='red' tertiary>Red: Stock Level At/Below Minimum</Segment>
                     </Segment.Group>   
-            </div>
+            </div> */}
 
             <div id="inventory-table-cont">
                 <Segment id="inventory-table-seg">
